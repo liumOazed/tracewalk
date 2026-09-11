@@ -553,7 +553,7 @@ function renderExplorer(){
   const host = document.getElementById('explorerTree');
   host.innerHTML = '';
   if(!root.children || !root.children.length){
-    host.innerHTML = '<div class="empty-state">tracewalk didn\\'t find any functions in this project.</div>';
+    host.innerHTML = '<div class="empty-state">tracewalk found no functions in this project.</div>';
     return;
   }
   host.appendChild(explorerRow(root, 0, 0, ''));
