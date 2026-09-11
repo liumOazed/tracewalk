@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tracewalk"
+version = "0.1.0"
+description = "Run a Python entry point once and see which functions across your project actually fired, as a folder-to-function tree."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "tracewalk" }]
+keywords = ["trace", "coverage", "dead-code", "call-graph", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+tracewalk = "tracewalk.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tracewalk = ["templates/*.html"]
